@@ -1,0 +1,26 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.4.2/aframe.min.js"></script>
+	</head>
+
+	<body>
+		<a-scene>
+			<a-asset>
+				<img id="sky" src="./Asset/EP_2_Still_081116.jpg" />
+				<img id="ground" src="./Asset/TexturesCom_Wood_ParquetHerringbone9_header.jpg" />
+
+				<a-asset-item id="freddy" crossorigin="anonymous" src="./Asset/czy_to_freddy_fazbear/scene.gltf"></a-asset-item>
+			</a-asset>
+			<a-sky src="#sky" rotation="0 -90 0"> </a-sky>
+
+			<a-plane material="  src: #ground;repeat: 5 5;normal-map: #road-nm;normal-texture-repeat: 5 5" scale="12 4 1" rotation="-90 0 0" positin="-5 0 -10"> </a-plane>
+
+			<a-entity gltf-model="#freddy" position="-1 0 -1.8" rotation="0 -120 0 " scale=".5 .5 .5"></a-entity>
+
+			<a-entity id="river" geometry="primitive: plane" scale="0.5 0.5 0.5" position="-1 0 -1.8" sound="src: url(./Asset/Is that Freddy Fazbear_.mp3); autoplay: true; loop:true"></a-entity>
+		</a-scene>
+	</body>
+</html>
